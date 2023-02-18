@@ -6,11 +6,11 @@ import SidebarLinks from './SidebarLinks';
 
 function Sidebar() {
   return (
-    <nav className='flex flex-col'>
+    <nav className='flex flex-col col-span-2 items-center px-4 md:items-start'>
       <Image
         src={logo}
         alt='logo'
-        className='object-contain'
+        className='object-contain m-3'
         width={40}
         height={40}
       />
