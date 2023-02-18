@@ -1,12 +1,9 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
-import Sidebar from './../components/Sidebar';
-import Feed from '../components/Feed';
-import Widgets from '../components/Widgets';
 
 const Home: NextPage = () => {
   return (
-    <div className=''>
+    <div className='flex min-h-screen flex-col items-center justify-center py-2'>
       <Head>
         <title>Twitter CLone</title>
         <link
@@ -15,13 +12,7 @@ const Home: NextPage = () => {
         />
       </Head>
 
-      <main>
-        <Sidebar />
-
-        <Feed/>
-
-        <Widgets/>
-      </main>
+      <h1>testing</h1>
     </div>
   );
 };
