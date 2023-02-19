@@ -3,8 +3,11 @@ import { BellIcon, HashtagIcon, BookmarkIcon, UserIcon, EnvelopeIcon,HomeIcon,El
 import Image from 'next/image';
 import { logo } from '../public/assets';
 import SidebarLinks from './SidebarLinks';
+import {useSession,signIn,signOut} from 'next-auth/react'
 
 function Sidebar() {
+  const {data:session} = useSession()
+
   return (
     <nav className='flex flex-col col-span-2 items-center px-4 md:items-start'>
       <Image
@@ -19,7 +22,7 @@ function Sidebar() {
       <SidebarLinks Icon={BellIcon} title='Notifications'/>
       <SidebarLinks Icon={EnvelopeIcon} title='Messages'/>
       <SidebarLinks Icon={BookmarkIcon} title='Bookmarks'/>
-      <SidebarLinks Icon={UserIcon} title='Sign In' />
+      <SidebarLinks onClick={session ? signOut:signIn} Icon={UserIcon} title={session ? 'Sign Out' : "Sign In"} access={true} />
       <SidebarLinks Icon={EllipsisHorizontalCircleIcon} title='more' />
     </nav>
   );
