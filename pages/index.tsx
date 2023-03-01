@@ -6,6 +6,7 @@ import Widgets from '../components/Widgets';
 import { fetchTweets } from '../utils/fetchTweets';
 import { Tweet } from '../typings';
 import { Toaster } from 'react-hot-toast';
+import SmallNav from '../components/SmallNav';
 
 interface Props{
   tweets:Tweet[]
@@ -26,6 +27,7 @@ const Home = ({tweets}:Props ) => {
 
       <main className='grid grid-cols-9'>
         <Sidebar />
+        <SmallNav/>
 
         <Feed tweets={tweets}/>
 

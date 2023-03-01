@@ -27,7 +27,7 @@ const Feed = ({tweets:tweetProps}:Props) => {
   }
   
   return (
-    <div className='col-span-7 lg:col-span-5 border-x overflow-scroll max-h-screen scrollbar-hide'>
+    <div className='col-span-9 md:col-span-7 lg:col-span-5 border-x overflow-scroll max-h-screen scrollbar-hide pb-14'>
 
        <div className='flex items-center justify-between'>
         <h1 className='p-5 pb-0 text-xl font-bold'>Home</h1>
